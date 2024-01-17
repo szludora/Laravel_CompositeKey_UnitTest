@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Brand;
+use App\Models\Part;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake('hu_HU')->name,
+            'part_id' => Part::all()->random->part_id,
+            'brand_id' => Brand::all()->random->brand_id,
         ];
     }
 }
