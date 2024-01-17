@@ -20,6 +20,9 @@ class Winning extends Model
     }
 
     protected $fillable = [
+        'user_id',
+        'brand_id',
+        'part_id',
         'product_id',
         'date'
     ];

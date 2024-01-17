@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Brand;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,7 @@ return new class extends Migration
             $table->String('country');
             $table->timestamps();
         });
+        Brand::create(['brand_id' => 1, 'name' => 'Fatal', 'country' => 'Magyarország']);
     }
 
     /**

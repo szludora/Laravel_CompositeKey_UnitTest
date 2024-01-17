@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->foreignId('brand_id')->references('brand_id')->on('brands');
             $table->timestamps();
         });
+        Product::create(['product_id' => 1, 'part_id' => 1, 'brand_id' => 1, 'name' => 'Szemüveg']);
     }
 
     /**
