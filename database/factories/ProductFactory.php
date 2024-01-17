@@ -20,8 +20,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => fake('hu_HU')->name,
-            'part_id' => Part::all()->random->part_id,
-            'brand_id' => Brand::all()->random->brand_id,
+            'part_id' => Part::all()->random()->part_id,
+            'brand_id' => Brand::all()->random()->brand_id,
         ];
     }
 }
