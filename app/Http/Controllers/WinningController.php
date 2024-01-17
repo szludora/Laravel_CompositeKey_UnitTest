@@ -36,9 +36,6 @@ class WinningController extends Controller
     public function update(Request $request, $user_id, $brand_id, $part_id)
     {
         $winning = $this->show($user_id, $brand_id, $part_id);
-        $winning->user_id = $request->user_id;
-        $winning->brand_id = $request->brand_id;
-        $winning->part_id = $request->part_id;
         $winning->product_id = $request->product_id;
         $winning->date = $request->date;
         $winning->save();
