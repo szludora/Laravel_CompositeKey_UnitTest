@@ -18,7 +18,7 @@ return new class extends Migration
             $table->String('country');
             $table->timestamps();
         });
-        Brand::create(['brand_id' => 1, 'name' => 'Fatal', 'country' => 'Magyarország']);
+        Brand::create(['brand_id'=>1,'name'=>'Fatal', 'country'=>'Magyarország']);
     }
 
     /**
